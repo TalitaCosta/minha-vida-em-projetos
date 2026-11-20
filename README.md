@@ -20,9 +20,17 @@ npm run build
 npm run preview
 ```
 
+Abra `http://localhost:4173/minha-vida-em-projetos/` para conferir o build.
+
+## Publicação no GitHub Pages
+
+No repositório `minha-vida-em-projetos`, selecione **GitHub Actions** em **Settings → Pages → Source**. O workflow `.github/workflows/deploy.yml` compila e publica `dist` após um push na `main). Também pode ser iniciado pela aba **Actions**.
+
+O endereço padrão será `https://<usuario>.github.io/minha-vida-em-projetos/`. As rotas usam fragmentos, como `#/projetos/<id>`, e podem ser abertas diretamente ou recarregadas.
+
 ## Armazenamento e backup
 
-Os dados são armazenados no IndexedDB do navegador e dependem da origem (endereço/porta). Use sempre o mesmo endereço para acessar os mesmos projetos. Não use navegação anônima. Utilize **Backup** regularmente para baixar um JSON e **Importar** para restaurar ou mesclar registros por ID. A importação substitui projetos com IDs iguais.
+Os dados ficam no IndexedDB do navegador, separados por origem (protocolo, domínio e porta). Para levar os projetos de `localhost` ao GitHub Pages, use **Exportar backup** no endereço local e **Importar backup** no endereço publicado. Guarde o ZIP fora do repositório. A importação aceita backups JSON antigos, com opções de mesclar ou substituir os dados.
 
 ## Recursos
 
@@ -31,4 +39,4 @@ Os dados são armazenados no IndexedDB do navegador e dependem da origem (endere
 - Checklist com progresso automático
 - Indicador de projetos sem atualização por 7 dias
 - Busca e filtros
-- Exportação e importação JSON
+- Exportação ZIP e importação ZIP ou JSON legado

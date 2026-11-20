@@ -1,0 +1,40 @@
+# Dependências e saída local
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Backups e dados locais
+backups/
+*.zip
+*[Bb]ackup*.json
+*.sqlite
+*.sqlite3
+*.db
+
+# Variáveis e credenciais locais
+.env
+.env.*
+.envrc
+.npmrc
+.aws/
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+credentials.json
+service-account*.json
+
+# Arquivos temporários, logs e configuração local
+.verify-*
+*.log
+*.tmp
+*.temp
+*.swp
+*.bak
+coverage/
+.codex/
+.agents/
+.DS_Store
+Thumbs.db
